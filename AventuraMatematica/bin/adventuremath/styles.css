@@ -1,0 +1,27 @@
+/* styles.css */
+.vbox {
+    -fx-background-color: #f0f0f0; /* Fondo claro */
+    -fx-padding: 20px; /* Espacio alrededor de la caja */
+}
+
+.label {
+    -fx-font-size: 18px; /* Tamaño de fuente aumentado */
+    -fx-text-fill: #333; /* Color del texto */
+    -fx-font-weight: bold; /* Texto en negrita */
+}
+
+.button {
+    -fx-background-color: #007bff; /* Color de fondo del botón */
+    -fx-text-fill: white; /* Color del texto del botón */
+    -fx-padding: 10px 20px; /* Espacios internos del botón */
+    -fx-font-size: 16px; /* Tamaño de fuente del botón */
+    -fx-border-radius: 5px; /* Esquinas redondeadas */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Color del botón al pasar el mouse */
+}
+
+.text-field {
+    -fx-font-size: 16px; /* Tamaño de fuente del campo de texto */
+}
