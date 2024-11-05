@@ -17,7 +17,7 @@ Antes de comenzar, asegúrate de tener instalado en tu máquina:
 Para clonar el repositorio en tu máquina local, abre una terminal y ejecuta:
 
 ```bash
-git clone https://github.com/tu_usuario/aventura-matematica.git
+git clone https://github.com/Luisop05/aventura-matem-tica.git
 
 ### 2. Configurar JavaFX
 
@@ -32,10 +32,9 @@ En la pestaña de Libraries, haz clic en Add External JARs... y selecciona todos
 Configurar Opciones de Ejecución:
 
 En Run Configurations, selecciona tu proyecto y en la pestaña VM Arguments, agrega:
-text
 
-Copy
 --module-path "ruta/a/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
+
 3. Ejecutar el Juego
 Para ejecutar el juego, simplemente ejecuta el archivo Main.java en tu IDE. Asegúrate de que todas las clases (Game.java, Player.java, Question.java) estén en el mismo paquete (adventuremath).
 
@@ -48,12 +47,12 @@ Compila todas las clases Java:
 
 bash
 
-Copy
 javac src/adventuremath/*.java
+
 Ejecuta el juego con el siguiente comando:
+
 bash
 
-Copy
 java --module-path "ruta/a/javafx-sdk/lib" --add-modules javafx.controls -cp src adventuremath.Main
 (Asegúrate de reemplazar "ruta/a/javafx-sdk/lib" con la ubicación real de tu carpeta lib de JavaFX.)
 
