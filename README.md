@@ -16,7 +16,6 @@ Antes de comenzar, asegúrate de tener instalado en tu máquina:
 
 Para clonar el repositorio en tu máquina local, abre una terminal y ejecuta:
 
-```bash
 git clone https://github.com/Luisop05/aventura-matem-tica.git
 
 ### 2. Configurar JavaFX
