@@ -34,7 +34,7 @@ En Run Configurations, selecciona tu proyecto y en la pestaña VM Arguments, agr
 
 --module-path "ruta/a/javafx-sdk/lib" --add-modules javafx.controls,javafx.fxml
 
-3. Ejecutar el Juego
+### 3. Ejecutar el Juego
 Para ejecutar el juego, simplemente ejecuta el archivo Main.java en tu IDE. Asegúrate de que todas las clases (Game.java, Player.java, Question.java) estén en el mismo paquete (adventuremath).
 
 Ejemplo de Ejecución desde la Línea de Comandos
