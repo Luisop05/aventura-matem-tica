@@ -1,23 +1,36 @@
-package adventuremath; // Declaración del paquete.
+package adventuremath;
 
-import java.util.List; // Importa List para el manejo de listas.
-import java.util.Random; // Importa Random para generar números aleatorios.
+import java.util.List;
+import java.util.Random;
 
-public class QuestionBank { // Clase que representa un banco de preguntas.
-    private List<Question> questions; // Lista de preguntas.
-    private Random random; // Generador de números aleatorios.
+/**
+ * Representa un banco de preguntas.
+ * Esta clase almacena una lista de preguntas y proporciona un método para obtener una pregunta aleatoria.
+ */
+public class QuestionBank {
+    private List<Question> questions;
+    private Random random;
 
-    // Constructor que inicializa el banco de preguntas.
+    /**
+     * Constructor que inicializa el banco de preguntas con una lista personalizada de preguntas.
+     *
+     * @param customQuestions La lista de preguntas a agregar al banco.
+     */
     public QuestionBank(List<Question> customQuestions) {
-        this.questions = customQuestions; // Asigna las preguntas al banco.
-        this.random = new Random(); // Inicializa el generador de números aleatorios.
+        this.questions = customQuestions;
+        this.random = new Random();
     }
 
-    public Question getRandomQuestion() { // Método que obtiene una pregunta aleatoria del banco.
-        if (questions.isEmpty()) { // Verifica si no hay preguntas disponibles.
-            return null; // Retorna nulo si no hay preguntas.
+    /**
+     * Obtiene una pregunta aleatoria del banco.
+     *
+     * @return Una pregunta aleatoria, o null si no hay preguntas disponibles.
+     */
+    public Question getRandomQuestion() {
+        if (questions.isEmpty()) {
+            return null;
         }
-        int index = random.nextInt(questions.size()); // Genera un índice aleatorio.
-        return questions.get(index); // Devuelve la pregunta correspondiente al índice.
+        int index = random.nextInt(questions.size());
+        return questions.get(index);
     }
 }
