@@ -1,26 +1,70 @@
-package adventuremath; // Declaración del paquete.
+package adventuremath;
 
-public class Question { // Clase Question que representa una pregunta.
-    private String questionText; // Texto de la pregunta.
-    private int correctAnswer; // Respuesta correcta (debe ser un entero).
-    private int pointsValue; // Valor en puntos de la pregunta.
-    
-    // Constructor que inicializa la pregunta.
+/**
+ * Representa una pregunta en un juego.
+ * Una pregunta tiene un texto, una respuesta correcta y un valor en puntos.
+ */
+public class Question {
+    /**
+     * El texto de la pregunta.
+     */
+    private String questionText;
+    /**
+     * La respuesta correcta a la pregunta.
+     */
+    private int correctAnswer;
+    /**
+     * El valor en puntos de la pregunta.
+     */
+    private int pointsValue;
+
+    /**
+     * Constructor que inicializa una pregunta.
+     *
+     * @param questionText  El texto de la pregunta.
+     * @param correctAnswer La respuesta correcta a la pregunta.
+     * @param pointsValue   El valor en puntos de la pregunta.
+     */
     public Question(String questionText, int correctAnswer, int pointsValue) {
-        this.questionText = questionText; // Asigna el texto de la pregunta.
-        this.correctAnswer = correctAnswer; // Asigna la respuesta correcta.
-        this.pointsValue = pointsValue; // Asigna el valor en puntos.
+        this.questionText = questionText;
+        this.correctAnswer = correctAnswer;
+        this.pointsValue = pointsValue;
     }
 
-    public String getQuestion() { // Método que devuelve el texto de la pregunta.
+    /**
+     * Devuelve el texto de la pregunta.
+     *
+     * @return El texto de la pregunta.
+     */
+    public String getQuestionText() {
         return questionText;
     }
 
-    public int getPointsValue() { // Método para obtener el valor en puntos.
+    /**
+     * Devuelve la respuesta correcta a la pregunta.
+     *
+     * @return La respuesta correcta a la pregunta.
+     */
+    public int getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    /**
+     * Devuelve el valor en puntos de la pregunta.
+     *
+     * @return El valor en puntos de la pregunta.
+     */
+    public int getPointsValue() {
         return pointsValue;
     }
 
-    public boolean checkAnswer(int answer) { // Método para verificar si la respuesta es correcta.
-        return answer == correctAnswer; // Devuelve verdadero si la respuesta del jugador es igual a la respuesta correcta.
+    /**
+     * Verifica si una respuesta es correcta.
+     *
+     * @param answer La respuesta del jugador.
+     * @return `true` si la respuesta es correcta, `false` en caso contrario.
+     */
+    public boolean checkAnswer(int answer) {
+        return answer == correctAnswer;
     }
 }
