@@ -1,25 +1,60 @@
-package adventuremath; // Declaración del paquete.
+package adventuremath;
 
-public class Player { // Clase que representa a un jugador.
+/**
+ * Representa a un jugador en un juego.
+ * Un jugador tiene un nombre y una cantidad de puntos.
+ */
+public class Player {
+    /**
+     * El nombre del jugador.
+     */
+    private String name;
+    /**
+     * Los puntos acumulados por el jugador.
+     */
+    private int points;
 
-    private String name; // Nombre del jugador.
-    private int points; // Puntos acumulados del jugador.
-
-    // Constructor que inicializa un jugador con un nombre.
+    /**
+     * Constructor que inicializa un jugador con un nombre.
+     *
+     * @param name El nombre del jugador.
+     */
     public Player(String name) {
-        this.name = name; // Asigna el nombre al jugador.
-        this.points = 0; // Inicializa los puntos en 0.
+        if (name == null || name.isEmpty()) {
+            throw new IllegalArgumentException("El nombre del jugador no puede ser nulo o vacío.");
+        }
+        this.name = name;
+        this.points = 0;
     }
 
-    public String getName() { // Método que devuelve el nombre del jugador.
+    /**
+     * Devuelve el nombre del jugador.
+     *
+     * @return El nombre del jugador.
+     */
+    public String getName() {
         return name;
     }
 
-    public int getPoints() { // Método que devuelve la cantidad de puntos del jugador.
+    /**
+     * Devuelve la cantidad de puntos del jugador.
+     *
+     * @return La cantidad de puntos del jugador.
+     */
+    public int getPoints() {
         return points;
     }
 
-    public void addPoints(int points) { // Método para añadir puntos al jugador.
-        this.points += points; // Aumenta los puntos del jugador por la cantidad pasada.
+    /**
+     * Añade puntos al jugador.
+     *
+     * @param points La cantidad de puntos a añadir.
+     * @throws IllegalArgumentException si se intenta añadir una cantidad negativa de puntos.
+     */
+    public void addPoints(int points) {
+        if (points < 0) {
+            throw new IllegalArgumentException("No se pueden añadir puntos negativos.");
+        }
+        this.points += points;
     }
 }
